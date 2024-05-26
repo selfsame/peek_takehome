@@ -10,4 +10,9 @@ defmodule PeekTakehome.Order do
     has_many(:payments, PeekTakehome.Payment)
     timestamps()
   end
+
+  def changeset(struct, params \\ %{}) do
+    struct
+    |> Ecto.Changeset.cast(params, [:email, :value_pence, :due_pence, :valid])
+  end
 end
