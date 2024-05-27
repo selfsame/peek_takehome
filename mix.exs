@@ -20,7 +20,8 @@ defmodule PeekTakehome.MixProject do
 
   defp deps do
     [
-      {:ecto_sqlite3, "~> 0.13"}
+      {:ecto_sqlite3, "~> 0.13"},
+      {:cachex, "~> 3.6"}
     ]
   end
 end

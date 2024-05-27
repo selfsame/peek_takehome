@@ -6,7 +6,8 @@ defmodule PeekTakehome.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      PeekTakehome.Repo
+      PeekTakehome.Repo,
+      {Cachex, name: :idempotency}
     ]
 
     opts = [strategy: :one_for_one, name: PeekTakehome.Supervisor]
